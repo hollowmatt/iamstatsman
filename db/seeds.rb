@@ -42,3 +42,69 @@ site_perf_list.each do |page|
   )
 end
 #------------/
+
+# Load default team data into Team table
+# name:string sdm:string techlead:string tpm:string pm:string sm:string
+#
+team_list = [
+	{
+		name: "ACE",
+		sdm: "James Evans",
+		techlead: "David Young",
+		tpm: "Paul Dobek",
+		pm: "Jason Morris", 
+		sm: "David Young"
+	},
+	{
+		name: "CHEX",
+		sdm: "Pete Murray",
+		techlead: "",
+		tpm: "Paul Dobek",
+		pm: "Charlotte George", 
+		sm: ""
+	},
+	{
+		name: "Discovery",
+		sdm: "Andrew Froehlich",
+		techlead: "James Montagne",
+		tpm: "Paul Dobek",
+		pm: "Asha Thurti", 
+		sm: ""		
+	},
+	{
+		name: "Phalcon",
+		sdm: "Vaibhav Kharat",
+		techlead: "Shilpa",
+		tpm: "Paul Dobek",
+		pm: "Charlotte George", 
+		sm: ""
+	},
+	{
+		name: "Premium Services",
+		sdm: "Matt Holloway",
+		techlead: "Payan Canaran",
+		tpm: "Kausik Basu",
+		pm: "",
+		sm: "Neha Koul"
+	},
+	{
+		name: "SEO",
+		sdm: "Matt Holloway",
+		techlead: "Radha Krishna Ratnala",
+		tpm: "Kausik Basu",
+		pm: "David Minchala",
+		sm: "Xiaolong Jiang"
+	}
+]
+
+team_list.each do |team|
+  Team.create( 
+  	name: team[:name], 
+  	sdm: team[:sdm], 
+  	techlead: team[:techlead], 
+  	tpm: team[:tpm],
+  	pm: team[:pm],
+  	sm: team[:sm]
+  )
+end
+#------------/
