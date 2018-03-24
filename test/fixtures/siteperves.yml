@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pagename: MyString
+  marketplace: MyString
+  snapshot: 2018-03-24
+  serverside: 1
+  domload: 1
+  onload: 1
+  pagesize: 9.99
+
+two:
+  pagename: MyString
+  marketplace: MyString
+  snapshot: 2018-03-24
+  serverside: 1
+  domload: 1
+  onload: 1
+  pagesize: 9.99

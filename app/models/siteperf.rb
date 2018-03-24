@@ -1,0 +1,2 @@
+class Siteperf < ApplicationRecord
+end
