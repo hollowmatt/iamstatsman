@@ -11,11 +11,8 @@
 				<div class="col s12 section-title">
 					Site Performance
 				</div>
-				<div class="col s8 section-chart">
-					chart
-				</div>
-				<div class="col s4 section-stats">
-					numbers
+				<div class="col s12 section-chart">
+					<%= bar_chart @perfdata, stacked: true %> 
 				</div>
 			</div>
 		</div>
@@ -45,7 +42,7 @@
 					Code Coverage
 				</div>
 				<div class="col s8 section-chart">
-					chart
+					<%= bar_chart @perfstats, stacked: "percent" %> 
 				</div>
 				<div class="col s4 section-stats">
 					numbers
