@@ -1,3 +1,21 @@
 // Place all the styles related to the teams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.team-name {
+	font-size: large;
+	font-weight: bold;
+	color: navy;
+	text-align: center;
+	line-height: 100px;
+}
+
+.team-body-head {
+	font-weight: bold;
+	display: table-cell;
+}
+
+.team-body-text {
+	display: table-cell;
+	padding-left: 5px;
+}
