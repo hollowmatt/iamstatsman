@@ -19,6 +19,7 @@ gem 'material_icons'
 gem 'materialize-sass'
 gem 'will_paginate-materialize'
 gem 'jquery-rails'
+gem 'responders'
 
 
 group :development, :test do
