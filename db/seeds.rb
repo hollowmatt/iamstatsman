@@ -48,52 +48,52 @@ end
 #
 team_list = [
 	{
-		name: "ACE",
-		sdm: "James Evans",
-		techlead: "David Young",
-		tpm: "Paul Dobek",
-		pm: "Jason Morris", 
-		sm: "David Young"
+		name: "Team 1",
+		sdm: "Person",
+		techlead: "Person",
+		tpm: "Person",
+		pm: "Person", 
+		sm: "Person"
 	},
 	{
-		name: "CHEX",
-		sdm: "Pete Murray",
-		techlead: "",
-		tpm: "Paul Dobek",
-		pm: "Charlotte George", 
-		sm: ""
+		name: "Team 2",
+		sdm: "Person",
+		techlead: "Person",
+		tpm: "Person",
+		pm: "Person", 
+		sm: "Person"
 	},
 	{
-		name: "Discovery",
-		sdm: "Andrew Froehlich",
-		techlead: "James Montagne",
-		tpm: "Paul Dobek",
-		pm: "Asha Thurti", 
-		sm: ""		
+		name: "Team 3",
+		sdm: "Person",
+		techlead: "Person",
+		tpm: "Person",
+		pm: "Person", 
+		sm: "Person"	
 	},
 	{
-		name: "Phalcon",
-		sdm: "Vaibhav Kharat",
-		techlead: "Shilpa",
-		tpm: "Paul Dobek",
-		pm: "Charlotte George", 
-		sm: ""
+		name: "Team 4",
+		sdm: "Person",
+		techlead: "Person",
+		tpm: "Person",
+		pm: "Person", 
+		sm: "Person"
 	},
 	{
-		name: "Premium Services",
-		sdm: "Matt Holloway",
-		techlead: "Payan Canaran",
-		tpm: "Kausik Basu",
-		pm: "",
-		sm: "Neha Koul"
+		name: "Team 5",
+		sdm: "Person",
+		techlead: "Person",
+		tpm: "Person",
+		pm: "Person", 
+		sm: "Person"
 	},
 	{
-		name: "SEO",
-		sdm: "Matt Holloway",
-		techlead: "Radha Krishna Ratnala",
-		tpm: "Kausik Basu",
-		pm: "David Minchala",
-		sm: "Xiaolong Jiang"
+		name: "Team 6",
+		sdm: "Person",
+		techlead: "Person",
+		tpm: "Person",
+		pm: "Person", 
+		sm: "Person"
 	}
 ]
 
