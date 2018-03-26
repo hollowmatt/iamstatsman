@@ -108,3 +108,22 @@ team_list.each do |team|
   )
 end
 #------------/
+
+# Create some tickets
+count = 1
+multiplier = 1
+tix = 16
+tix_count = 0
+while count < 100
+	ticket_num = count.to_s.rjust(10, '0')
+	@team = Team.find(multiplier)
+	ticket = @team.tickets.create(severity: 2 + rand(5), ticket_num: ticket_num, title: ticket_num + " description")
+	tix_count = tix_count + 1
+	if (tix_count >= tix)
+		if (multiplier <6)
+			multiplier = multiplier + 1
+		end
+	end
+	count = count + 1
+end
+#------------/

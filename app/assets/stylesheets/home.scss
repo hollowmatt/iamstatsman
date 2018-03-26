@@ -1,3 +1,19 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page-title {
+	font-size: 30pt;
+	font-weight: bold;
+	color: orange;
+}
+
+.section-title {
+	font-size: 22pt;
+	font-weight: bold;
+}
+
+.section-data {
+	margin-left: 10px;
+	padding-left: 5px;
+}

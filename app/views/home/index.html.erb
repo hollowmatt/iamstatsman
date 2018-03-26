@@ -23,11 +23,8 @@
 				<div class="col s12 section-title">
 					Tickets
 				</div>
-				<div class="col s8 section-chart">
-					chart
-				</div>
-				<div class="col s4 section-stats">
-					numbers
+				<div class="col s12 section-chart">
+					<%= bar_chart @tickets.group(:severity).count %>
 				</div>
 			</div>
 		</div>
@@ -41,11 +38,8 @@
 				<div class="col s12 section-title">
 					Code Coverage
 				</div>
-				<div class="col s8 section-chart">
+				<div class="col s12 section-chart">
 					<%= bar_chart @perfstats, stacked: "percent" %> 
-				</div>
-				<div class="col s4 section-stats">
-					numbers
 				</div>
 			</div>
 		</div>
@@ -56,11 +50,86 @@
 				<div class="col s12 section-title">
 					3rd Party Tags
 				</div>
-				<div class="col s6 section-chart">
-					stats part 1
+				<div class="col s12">
+					<ul class="section-data">
+						<li><strong>CA: </strong>127
+						<li><strong>US: </strong>212
+						<li><strong>UK: </strong>314
+						<li><strong>FR: </strong>456
+						<li><strong>DE: </strong>712
+						<li><strong>IT: </strong>123
+						<li><strong>IN: </strong>215
+						<li><strong>JP: </strong>149
+						<li><strong>AU: </strong>365
+					</ul>
 				</div>
-				<div class="col s6 section-stats">
-					stats part 2
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div  class="col s12 section">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 section-title">
+					On Call
+					<hr/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<ul class="section-data">
+						<li><strong>ACE: </strong>David Young
+						<li><strong>CHEX: </strong>James Slocum
+						<li><strong>Discovery: </strong>Kyle Studd	 
+					</ul>
+				</div>
+				<div class="col s6">
+					<ul class="section-data">
+						<li><strong>Phalcon: </strong>Alex Guo
+						<li><strong>Premium Services: </strong>Kevin Zou
+						<li><strong>SEO: </strong>Manan Shah 
+					</ul> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div  class="col s6 section">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 section-title">
+					PI Priorities
+				</div>
+				<div class="col s12">
+					<ul class="section-data">
+						<li><strong>1. </strong>Arya Migration
+						<li><strong>2. </strong>Rolling Stone
+						<li><strong>3. </strong>PAS Deprecation
+						<li><strong>4. </strong>TxE Migration
+						<li><strong>5. </strong>Gift Center
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div  class="col s6 section">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 section-title">
+					Tech Priorities
+				</div>
+				<div class="col s12">
+					<ul class="section-data">
+						<li><strong>1. </strong>Site Performance 
+						<li><strong>2. </strong>Increase use of iViews
+						<li><strong>3. </strong>Tech Debt cleanup
+						<li><strong>4. </strong>International Parity
+						<li><strong>5. </strong>Team outings
+					</ul>
 				</div>
 			</div>
 		</div>

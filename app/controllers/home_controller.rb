@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
 	def index
+		# Perf Stuff
 		# @perfs = Siteperf.all
 		@perfdata = [
 		  {
@@ -25,5 +26,8 @@ class HomeController < ApplicationController
 				data: [["This Week", 81], ["Last Week", 71]]
 			}
 		]
+
+		# Tickets Stuff
+		@tickets = Ticket.all
 	end
 end
