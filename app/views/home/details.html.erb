@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="col s12 page-title">
+		Audible Premium Scorecard
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s12">
+		<div class="section-data">
+			
+			<p>
+				<strong>What is the goal</strong>
+			</p>
+			<p>
+				The goal of this app is to pull data from various sources to automate the creation of the 
+				scorecard for the Premium organization.  The automation can take various forms:
+			</p>
+			<ul class="section-data">
+				<li> - Pull data 'realtime' from various sources upon page load (likely slow)</li>
+				<li> - Run background scheduled jobs to pull data and store in database, then page load calls from db</li>
+				<li> - Cache data, but in background - when job runs - refresh cache</li>
+			</ul>
+			<p>
+				The app should be built in a simple manner, such that new data is easy to add.  Eventually, create the 
+				page sections as widgets, likely using React.  Also, the data should drill down... clicking on the 
+				site performance chart (for instance) would take you to a performance page, with detailed performance 
+				statistics, that also would link to CSM, iGraph, etc.  
+			</p>
+			<p>
+				Other sections should do likewise (taking you to team specific TT pages, or the oncall schedule, JIRA, etc.)
+			</p>
+		</div>
+	</div>
+</div>
+<div><%= link_to 'Home', root_path %></div>

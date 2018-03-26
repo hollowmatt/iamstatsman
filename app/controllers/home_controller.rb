@@ -30,4 +30,8 @@ class HomeController < ApplicationController
 		# Tickets Stuff
 		@tickets = Ticket.all
 	end
+
+	def details
+
+	end
 end
