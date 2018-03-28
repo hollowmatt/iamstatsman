@@ -4,6 +4,7 @@ var Main = createReactClass({
       <div>
         <Header />
         <AllTeams />
+        <NewTeam />
       </div>
     );
   }
