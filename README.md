@@ -25,6 +25,7 @@ This project uses the following:
 * JQuery
 * Ruby 2.5.x, Rails 5.x
 * Chartkick
+* React (react on rails gem)
 
 To get started:
 
