@@ -39,3 +39,6 @@ To get started:
 
 __Development__:
 I use Sublime Text 2 for my IDE, but you don't have to.  I also use a MacBook, so if you have Windows specific issues, I can't help you there.
+
+__Issues__:
+1. Issue with form submission -  need to fix the react form.
