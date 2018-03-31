@@ -1,0 +1,17 @@
+<h1>Team Page</h1>
+
+
+<% @teams.each do |team| %>
+	<div class="row">
+		<div class="col s6 team-name"><%=team.name %> </div>
+		<div class="col s6 details">
+			<ul>
+				<li><div class="team-body-head">Manager:</div><div class="team-body-text"><%=team.name %> </div>
+				<li><div class="team-body-head">Tech Lead:</div><div class="team-body-text"><%=team.techlead %> </div>
+				<li><div class="team-body-head">Scrum Master:</div><div class="team-body-text"><%=team.sm %> </div>
+				<li><div class="team-body-head">TPM:</div><div class="team-body-text"><%=team.tpm %> </div>
+				<li><div class="team-body-head">PM:</div><div class="team-body-text"><%=team.pm %> </div>
+		</div>
+	</div>
+<% end %>
+</ul>
