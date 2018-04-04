@@ -1,5 +1,5 @@
-var Main = createReactClass({
-  render: function() {
+class Main extends React.Component {
+  render() {
     return (
       <div>
         <Header />
@@ -8,5 +8,5 @@ var Main = createReactClass({
       </div>
     );
   }
-});
+}
 
