@@ -1,56 +1,61 @@
-var NewTeam = createReactClass({
-	propTypes: {
-    name: PropTypes.string,
-    sdm: PropTypes.string,
-    techlead: PropTypes.string,
-    tpm: PropTypes.string,
-    pm: PropTypes.string,
-    sm: PropTypes.string
-  },
-	getInitialState: function() {
-		return {
+class NewTeam extends React.Component{
+	constructor(props) {
+		super(props);
+    this.state = {
 			name:'',
 			sdm:'',
 			techlead:'',
 			tpm:'',
 			pm:'',
 			sm:''
-		}
-	},
-	handleAdd: function(e) {
-    e.preventDefault();
-    var self = this;
+		};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+	}
+
+	handleAdd(e) {
     if (this.validForm()) {
       $.ajax({
         url: '/api/v1/teams',
         method: 'POST',
-        data: { event: self},
-        success: function(data) {
-          self.props.handleAdd(data);
-          self.setState(self.getInitialState());
+        data: { 
+          team: {
+            name: this.state.name,
+            sdm: this.state.sdm,
+            techlead: this.state.techlead,
+            tpm: this.state.tpm,
+            pm: this.state.pm,
+            sm: this.state.sm
+          }
         },
-        error: function(xhr, status, error) {
+        success: (response) => {
+          self.setState();
+        },
+        error: (xhr, status, error) => {
           alert('Cannot add new record: ', error);
         }
-      })
+      });
     } else {
       alert('Please fill in all fields');
     }
-  },
-  validForm: function() {
+  }
+
+  validForm() {
     if (this.state.name && this.state.sdm && this.state.techlead &&
         this.state.tpm && this.state.pm && this.state.sm ) {
       return true;
     } else {
       return false;
     }
-  },
-  handleChange: function(e) {
+  }
+
+  handleChange(e) {
     var input_name = e.target.name;
     var value = e.target.value;
     this.setState({[input_name] : value });
-  },
-  render: function() {
+  }
+
+  render() {
     return (
       <form className="form-inline" onSubmit={this.handleAdd}>
       	<div className="form-group">
@@ -98,5 +103,5 @@ var NewTeam = createReactClass({
       	<button type="submit" className="btn flatt-butt-md flat-primary-butt">Save</button>
       </form>
     );
-  },
-});
+  }
+}
