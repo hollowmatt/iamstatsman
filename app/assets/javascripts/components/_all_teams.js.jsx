@@ -1,16 +1,17 @@
-var AllTeams = createReactClass({
-	getInitialState() { 
-		return { teams: [] }
-  }, 
+class AllTeams extends React.Component{
+	constructor(props) { 
+    super(props);
+		this.state = { teams: [] }
+  } 
 
   componentDidMount() { 
   	$.getJSON('/api/v1/teams.json', (response) => { this.setState({ teams: response }) }); 
-  },
+  }
 
-  render: function() {
-    var teams = this.state.teams.map((team) => {
+  render() {
+    var teams = this.state.teams.map((team, index) => {
     	return (
-    		<div>
+    		<div key={index}>
     			<h3>{team.name}</h3>
     			<ul>
     				<li><strong>SDM</strong>{team.sdm}</li>
@@ -27,6 +28,6 @@ var AllTeams = createReactClass({
       <div>
         {teams}
       </div>
-    )
+    );
   }
-});
+}
