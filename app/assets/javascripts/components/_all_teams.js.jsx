@@ -1,15 +1,7 @@
 class AllTeams extends React.Component{
-	constructor(props) { 
-    super(props);
-		this.state = { teams: [] }
-  } 
-
-  componentDidMount() { 
-  	$.getJSON('/api/v1/teams.json', (response) => { this.setState({ teams: response }) }); 
-  }
-
+	
   render() {
-    var teams = this.state.teams.map((team, index) => {
+    var teams = this.props.teams.map((team, index) => {
     	return (
     		<div key={index}>
     			<h3>{team.name}</h3>
