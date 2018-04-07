@@ -19,14 +19,7 @@ class NewTeam extends React.Component{
         url: '/api/v1/teams',
         method: 'POST',
         data: { 
-          team: {
-            name: this.state.name,
-            sdm: this.state.sdm,
-            techlead: this.state.techlead,
-            tpm: this.state.tpm,
-            pm: this.state.pm,
-            sm: this.state.sm
-          }
+          team: this.state
         },
         success: (response) => {
           this.props.handleSubmit(data);
