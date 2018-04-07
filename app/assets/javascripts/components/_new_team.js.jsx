@@ -15,14 +15,13 @@ class NewTeam extends React.Component{
 
 	handleAdd(e) {
     if (this.validForm()) {
+      team = { team : this.state };
       $.ajax({
         url: '/api/v1/teams',
         method: 'POST',
-        data: { 
-          team: this.state
-        },
+        data: team,
         success: (response) => {
-          this.props.handleSubmit(data);
+          this.props.handleSubmit(team);
         },
         error: (xhr, status, error) => {
           alert('Cannot add new record: ', error);
