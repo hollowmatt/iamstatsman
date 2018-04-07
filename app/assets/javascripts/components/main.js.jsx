@@ -9,7 +9,7 @@ class Main extends React.Component {
   }
 
   handleSubmit(item) {
-  	// do stuff
+  	alert(item);
   }
 
   render() {
