@@ -1,13 +1,16 @@
 class Game extends React.Component {
-  constructor(props) { 
-    super(props);
-	} 
-
   render() {
     return (
-      <div>
-        <p>Tic Tac Toe</p>
+      <div className="game">
+        <div className="game-board">
+          <Board />
+        </div>
+        <div className="game-info">
+          <div>{/* status */}</div>
+          <ol>{/* TODO */}</ol>
+        </div>
       </div>
     );
   }
 }
+
