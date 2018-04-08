@@ -15,6 +15,7 @@ class NewTeam extends React.Component{
 
 	handleAdd(e) {
     if (this.validForm()) {
+      e.preventDefault();
       team = { team : this.state };
       $.ajax({
         url: '/api/v1/teams',

@@ -9,7 +9,9 @@ class Main extends React.Component {
   }
 
   handleSubmit(item) {
-  	console.log(item);
+  	alert(item);
+  	var newState = this.state.teams.concat(item); 
+  	this.setState({ teams: newState });
   }
 
   render() {
