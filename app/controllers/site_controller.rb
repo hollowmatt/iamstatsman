@@ -1,5 +1,5 @@
 class SiteController < ApplicationController
-	def index
+	def teams
 	end
 	def tictactoe
 		# https://reactjs.org/tutorial/tutorial.html
