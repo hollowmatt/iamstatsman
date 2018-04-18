@@ -1,7 +1,17 @@
 class Teams extends React.Component {
   constructor(props) { 
     super(props);
-		this.state = { teams: [] }
+		this.state = { 
+      teams: [],
+      newTeam: {
+        name:'',
+        sdm:'',
+        techlead:'',
+        tpm:'',
+        pm:'',
+        sm:''
+      } 
+    }
   } 
 
   componentDidMount() { 
@@ -19,7 +29,7 @@ class Teams extends React.Component {
       <div>
         <Header />
         <AllTeams teams={this.state.teams} />
-        <NewTeam handleSubmit={this.handleSubmit}/>
+        <NewTeam newTeam={this.state.newTeam} handleSubmit={this.handleSubmit}/>
       </div>
     );
   }
