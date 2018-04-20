@@ -85,7 +85,7 @@ class NewTeam extends React.Component{
         			   value={this.props.newTeam.sm}
         			   onChange={this.handleChange} />
         </div>
-      	<button type="submit" className="btn flatt-butt-md flat-primary-butt">Save</button>
+      	<button onClick={()=> this.handleAdd(e)} className="btn flatt-butt-md flat-primary-butt">Save</button>
       </form>
     );
   }

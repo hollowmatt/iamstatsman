@@ -29,7 +29,7 @@ class Teams extends React.Component {
       <div>
         <Header />
         <AllTeams teams={this.state.teams} />
-        <NewTeam newTeam={this.state.newTeam} handleSubmit={this.handleSubmit}/>
+        <NewTeam newTeam={this.state.newTeam} />
       </div>
     );
   }
