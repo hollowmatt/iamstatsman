@@ -1,27 +1,17 @@
-class Teams extends React.Component {
+class Main extends React.Component {
   constructor(props) { 
     super(props);
-		this.state = { 
-      teams: [],
-      newTeam: {
-        name:'',
-        sdm:'',
-        techlead:'',
-        tpm:'',
-        pm:'',
-        sm:''
-      } 
-    }
+    this.state = { teams: [] }
   } 
 
   componentDidMount() { 
-  	$.getJSON('/api/v1/teams.json', (response) => { this.setState({ teams: response }) }); 
+    $.getJSON('/api/v1/teams.json', (response) => { this.setState({ teams: response }) }); 
   }
 
   handleSubmit(item) {
-  	alert(item);
-  	var newState = this.state.teams.concat(item); 
-  	this.setState({ teams: newState });
+    alert(item);
+    var newState = this.state.teams.concat(item); 
+    this.setState({ teams: newState });
   }
 
   render() {
@@ -29,7 +19,7 @@ class Teams extends React.Component {
       <div>
         <Header />
         <AllTeams teams={this.state.teams} />
-        <NewTeam newTeam={this.state.newTeam} />
+        <NewTeam handleSubmit={this.handleSubmit}/>
       </div>
     );
   }
