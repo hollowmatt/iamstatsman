@@ -22,7 +22,7 @@ class NewTeam extends React.Component{
         method: 'POST',
         data: team,
         success: (response) => {
-          this.props.handleSubmit(team);
+          this.props.handleSubmit(response);
         },
         error: (xhr, status, error) => {
           alert('Cannot add new record: ', error);
