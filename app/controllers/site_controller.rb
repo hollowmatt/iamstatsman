@@ -4,4 +4,6 @@ class SiteController < ApplicationController
 	def tictactoe
 		# https://reactjs.org/tutorial/tutorial.html
 	end
+	def squad
+	end
 end
