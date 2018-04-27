@@ -2,7 +2,15 @@ class Squad extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			teams: []
+			teams: [],
+			team: {
+	      name:'',
+	      sdm:'',
+	      techlead:'',
+	      tpm:'',
+	      pm:'',
+	      sm:''
+    	}
 		};
 	}
 
@@ -19,6 +27,9 @@ class Squad extends React.Component {
 	render() {
 		return(
 			<div>
+				<NewSquad 
+					team={this.state.team}
+					onClick={(i) => this.handleClick(i)} />
 				<AllSquads teams={this.state.teams} />
 			</div>
 		);
