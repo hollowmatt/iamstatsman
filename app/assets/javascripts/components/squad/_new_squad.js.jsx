@@ -1,28 +1,56 @@
 class NewSquad extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			name: '',
-			sdm: '',
-			techlead: '',
-			tpm: '',
-			pm: '',
-			sm: ''
-		}
-		this.handleChange = this.handleChange.bind(this);
-	}
-
-	handleChange(e) {
-    var input_name = e.target.name;
-    var value = e.target.value;
-    this.setState({
-  		team: {[input_name] : value }
-  	});
+ constructor(props) {
+    super(props);
+    this.state = {
+      name:'',
+      sdm:'',
+      techlead:'',
+      tpm:'',
+      pm:'',
+      sm:''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
   }
 
-	render() {
+  handleAdd(e) {
+    if (this.validForm()) {
+      e.preventDefault();
+      team = { team : this.state };
+      $.ajax({
+        url: '/api/v1/teams',
+        method: 'POST',
+        data: team,
+        success: (response) => {
+          this.props.handleAdd(response);
+        },
+        error: (xhr, status, error) => {
+          alert('Cannot add new record: ', error);
+        }
+      });
+    } else {
+      alert('Please fill in all fields');
+    }
+  }
+
+  validForm() {
+    if (this.state.name && this.state.sdm && this.state.techlead &&
+        this.state.tpm && this.state.pm && this.state.sm ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  handleChange(e) {
+    var input_name = e.target.name;
+    var value = e.target.value;
+    this.setState({[input_name] : value });
+  }
+
+  render() {
     return (
-      <form className="form-inline" >
+      <form className="form-inline" onSubmit={this.handleAdd}>
         <div className="form-group">
           <input type="text" 
                  name="name" 
@@ -65,11 +93,7 @@ class NewSquad extends React.Component {
                  value={this.state.sm}
                  onChange={this.handleChange} />
         </div>
-        <button type="submit" 
-        				className="btn flatt-butt-md flat-primary-butt" 
-        				onClick={() => this.props.onClick({ team: this.props.team })}>
-        	Save
-        </button>
+        <button type="submit" className="btn flatt-butt-md flat-primary-butt">Save</button>
       </form>
     );
   }
