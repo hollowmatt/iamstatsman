@@ -15,21 +15,33 @@ class Squad extends React.Component {
 	}
 
 	componentDidMount() { 
-    $.getJSON('/api/v1/teams.json', (response) => { this.setState({ teams: response }) }); 
+    this.getDataFromApi();
   }
 
-  handleClick(i) {
-  	const history = this.state.teams;
-  	this.setState({
-  		teams: history.concat(i)
+  getDataFromApi() {
+  	var self = this;
+  	$.ajax({
+  		url: '/api/v1/teams.json',
+  		success: function(data) {
+  			self.setState({ teams: data });
+  		},
+  		error: function(xhr, status, error) {
+  			alert('Cannot get data from API: ', error);
+  		}
   	});
   }
+
+  handleAdd(event) {
+  	var teams = this.state.teams;
+  	teams.push(event);
+  	this.setState({teams: teams});
+  }
+
+ 
 	render() {
 		return(
 			<div>
-				<NewSquad 
-					team={this.state.team}
-					onClick={(i) => this.handleClick(i)} />
+				<NewSquad handleAdd={this.handleAdd(event)} />
 				<AllSquads teams={this.state.teams} />
 			</div>
 		);
