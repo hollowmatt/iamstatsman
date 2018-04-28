@@ -29,6 +29,7 @@ class Squad extends React.Component {
   			alert('Cannot get data from API: ', error);
   		}
   	});
+  	//$.getJSON('/api/v1/teams.json', (response) => { this.setState({ teams: response }) });
   }
 
   handleAdd(event) {
@@ -41,7 +42,7 @@ class Squad extends React.Component {
 	render() {
 		return(
 			<div>
-				<NewSquad handleAdd={this.handleAdd(event)} />
+				<NewSquad handleAdd={(i) => this.handleAdd(i)} />
 				<AllSquads teams={this.state.teams} />
 			</div>
 		);
