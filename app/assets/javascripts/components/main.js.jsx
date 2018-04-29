@@ -1,7 +1,7 @@
 class Main extends React.Component {
   constructor(props) { 
     super(props);
-    this.state = { teams: [] }
+    this.state = { teams: [] };
   } 
 
   componentDidMount() { 
@@ -10,7 +10,8 @@ class Main extends React.Component {
 
   handleSubmit(item) {
     var newState = this.state.teams;
-    this.setState({ teams: newState.concat(item)  });
+    newState.push(item);
+    this.setState({ teams: newState });
   }
 
   render() {

@@ -34,8 +34,8 @@ class Squad extends React.Component {
 	render() {
 		return(
 			<div>
-				<NewSquad handleAdd={(i) => this.handleAdd(i)} />
 				<AllSquads teams={this.state.teams} />
+				<NewSquad handleAdd={(i) => this.handleAdd(i)} />
 			</div>
 		);
 	}
