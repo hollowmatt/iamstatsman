@@ -3,14 +3,6 @@ class Squad extends React.Component {
 		super(props);
 		this.state = {
 			teams: [],
-			team: {
-	      name:'',
-	      sdm:'',
-	      techlead:'',
-	      tpm:'',
-	      pm:'',
-	      sm:''
-    	}
 		};
 	}
 
