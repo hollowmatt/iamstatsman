@@ -2,21 +2,44 @@ class AllSquads extends React.Component {
 	render() {
 		var teams = this.props.teams.map((team, index) => {
 			return(
-				<div key={index}>
-					<h3>{team.name}</h3>
-					<ul>
-    				<li><strong>SDM:</strong> {team.sdm}</li>
-    				<li><strong>Tech Lead:</strong>{ team.techlead}</li>
-    				<li><strong>TPM:</strong> {team.tpm}</li>
-    				<li><strong>Product Manager:</strong> {team.pm}</li>
-    				<li><strong>Scrum Master:</strong> {team.sm}</li>
-    			</ul>
-				</div>
+				<Squad team={team} idx={index} />	
 			);
 		});
 
 		return (
 			<div>
+				<div className="row">
+					<div className="col s2">
+						<strong>
+							Team Name
+						</strong>
+					</div>
+					<div className="col s2">
+						<strong>
+							SDM
+						</strong>
+					</div>
+					<div className="col s2">
+						<strong>
+							Tech Lead
+						</strong>
+					</div>
+					<div className="col s2">
+						<strong>
+							TPM
+						</strong>
+					</div>
+					<div className="col s2">
+						<strong>
+							Product
+						</strong>
+					</div>
+					<div className="col s2">
+						<strong>
+							Scrum Master
+						</strong>
+					</div>
+				</div>
 				{teams}
 			</div>
 		);
