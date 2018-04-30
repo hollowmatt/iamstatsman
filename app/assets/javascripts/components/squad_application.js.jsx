@@ -1,4 +1,4 @@
-class Squad extends React.Component {
+class SquadApplication extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
