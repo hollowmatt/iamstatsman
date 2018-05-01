@@ -15,3 +15,17 @@
 	display: table-cell;
 	padding-left: 5px;
 }
+
+.cell {
+	padding: 2px;
+	font: arial;
+	border-top: 1px solid;
+}
+
+.table-head {
+	font-weight: bold;
+	display: table-cell;
+	font-size: medium;
+	color: navy;
+	padding: 5px;
+}

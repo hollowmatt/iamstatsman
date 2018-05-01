@@ -35,6 +35,9 @@ class SquadApplication extends React.Component {
 		return(
 			<div>
 				<AllSquads teams={this.state.teams} />
+				<div className="team-name">
+					Add a team
+				</div>
 				<NewSquad handleAdd={(i) => this.handleAdd(i)} />
 			</div>
 		);
