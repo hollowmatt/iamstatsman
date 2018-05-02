@@ -6,7 +6,11 @@ class Squad extends React.Component {
 			<div className="row">
 				<div key={idx}>
 					<div className="col s2 cell">
-						{team.name}
+						{team.name} 
+						<a className="btn btn-xs"
+             onClick={this.handleDelete} >
+            	Delete
+          	</a>
 					</div>
 					<div className="col s2 cell">
 						{team.sdm}
