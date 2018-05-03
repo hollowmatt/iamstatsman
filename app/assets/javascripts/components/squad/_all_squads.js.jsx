@@ -7,9 +7,11 @@ class AllSquads extends React.Component {
 		});
 
 		return (
-			<div>
-				<SquadTableHeader />
-				{teams}
+			<div className="row">
+				<table>
+					<SquadTableHeader />
+					{teams}
+				</table>
 			</div>
 		);
 	}

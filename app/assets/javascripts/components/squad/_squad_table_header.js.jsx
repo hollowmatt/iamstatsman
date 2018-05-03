@@ -1,38 +1,26 @@
 class SquadTableHeader extends React.Component {
 	render() {
 		return(
-			<div className="row">
-				<div className="col s2 table-head">
-					<strong>
+			<tr>
+				<th>
 						Team Name
-					</strong>
-				</div>
-				<div className="col s2 table-head">
-					<strong>
+				</th>
+				<th>
 						SDM
-					</strong>
-				</div>
-				<div className="col s2 table-head">
-					<strong>
+				</th>
+				<th>
 						Tech Lead
-					</strong>
-				</div>
-				<div className="col s2 table-head">
-					<strong>
+				</th>
+				<th>
 						TPM
-					</strong>
-				</div>
-				<div className="col s2 table-head">
-					<strong>
+				</th>
+				<th>
 						Product
-					</strong>
-				</div>
-				<div className="col s2 table-head">
-					<strong>
+				</th>
+				<th>
 						Scrum Master
-					</strong>
-				</div>
-			</div>
+				</th>
+			</tr>
 		);
 	}
 }
