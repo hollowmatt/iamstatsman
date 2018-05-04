@@ -6,10 +6,6 @@ class Squad extends React.Component {
 			<tr key={idx}>
 				<td>
 					{team.name} 
-					<a className="btn btn-xs"
-           onClick={this.handleDelete} >
-          	Delete
-        	</a>
 				</td>
 				<td>
 					{team.sdm}
@@ -25,6 +21,16 @@ class Squad extends React.Component {
 				</td>
   			<td>
   				{team.sm}
+				</td>
+				<td>
+					<a className="btn-flat btn-xs"
+           onClick={this.handleDelete} >
+          	<i class="material-icons red419">delete</i>
+        	</a>
+        	<a className="btn-flat btn-xs"
+           onClick={this.handleEdit} >
+          	<i class="material-icons orange600">edit</i>
+        	</a>
 				</td>
 			</tr>
 		);
