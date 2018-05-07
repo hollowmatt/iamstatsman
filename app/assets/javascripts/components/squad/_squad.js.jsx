@@ -62,14 +62,18 @@ class Squad extends React.Component {
   }
 
   renderForm() {
-
+  	return(
+  		<a className="btn-flat btn-xs"
+       onClick={this.handleToggle} >
+      	<i className="material-icons orange600">edit</i>
+    	</a>
+  	);
   }
 
 	renderData() {
-		var team = this.props.team
-		var idx = this.props.idx
+		var team = this.props.team;
 		return(
-			<tr key={idx}>
+			<tr key={this.props.idx}>
 				<td>
 					{team.name} 
 				</td>
@@ -91,11 +95,11 @@ class Squad extends React.Component {
 				<td>
 					<a className="btn-flat btn-xs"
            onClick={this.handleDelete} >
-          	<i class="material-icons red419">delete</i>
+          	<i className="material-icons red419">delete</i>
         	</a>
         	<a className="btn-flat btn-xs"
-           onClick={this.handleEdit} >
-          	<i class="material-icons orange600">edit</i>
+           onClick={this.handleToggle} >
+          	<i className="material-icons orange600">edit</i>
         	</a>
 				</td>
 			</tr>

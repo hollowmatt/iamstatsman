@@ -9,8 +9,12 @@ class AllSquads extends React.Component {
 		return (
 			<div className="row">
 				<table>
-					<SquadTableHeader />
-					{teams}
+					<thead>
+						<SquadTableHeader />
+					</thead>
+					<tbody>
+						{teams}
+					</tbody>
 				</table>
 			</div>
 		);

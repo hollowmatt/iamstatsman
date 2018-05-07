@@ -17,7 +17,7 @@ class SquadTableHeader extends React.Component {
 				<th>
 						Product
 				</th>
-				<th colspan="2">
+				<th colSpan="2">
 						Scrum Master
 				</th>
 			</tr>
