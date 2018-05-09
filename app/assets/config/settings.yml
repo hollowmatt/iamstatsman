@@ -1,0 +1,5 @@
+dev_flags:
+  -
+    key: show_nerv_qa
+    description: "Show web instrumentation (NERV) tagging, QA tool only.  Blue: root element, Yellow: intermediary element, Green: tracked clickable element, Hotpink: untracked clickable element"
+    default: false
