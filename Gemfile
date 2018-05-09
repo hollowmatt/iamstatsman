@@ -20,6 +20,7 @@ gem 'materialize-sass'
 gem 'will_paginate-materialize'
 gem 'jquery-rails'
 gem 'responders'
+gem 'rails_config'
 
 
 group :development, :test do
