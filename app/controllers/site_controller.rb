@@ -6,4 +6,6 @@ class SiteController < ApplicationController
 	end
 	def squad
 	end
+	def people
+	end
 end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/tictactoe', to: 'site#tictactoe'
   get '/stats', to: 'home#index'
   get '/details', to: 'home#details'
+  get '/peeps', to: 'site#people'
   resources :teams
 
   namespace :api do
