@@ -1,0 +1,2 @@
+class PeepsController < ApplicationController
+end
