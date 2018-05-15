@@ -23,6 +23,12 @@ class Person extends React.Component {
 		});
 	}
 
+	handleAdd(event) {
+		var peeps = this.state.peeps;
+		peeps.push(event);
+		this.setState({peeps: peeps});
+	}
+
 	render() {
 		return(
 			<div>
