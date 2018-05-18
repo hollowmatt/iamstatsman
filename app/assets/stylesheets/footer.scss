@@ -1,0 +1,15 @@
+html, body {
+  height: 100%
+}
+
+.footer {
+  background: $footer-background;
+  height: 100%;
+  padding: 18px;
+  margin-top: 18px;
+  color: $white-text;
+  
+  & p{
+    font-size: medium;
+  }
+}
