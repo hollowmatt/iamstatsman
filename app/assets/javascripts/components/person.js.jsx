@@ -23,10 +23,20 @@ class Person extends React.Component {
 		});
 	}
 
+	handleAdd(event) {
+		var peeps = this.state.peeps;
+		peeps.push(event);
+		this.setState({peeps: peeps});
+	}
+
 	render() {
 		return(
 			<div>
 				<AllNames peeps={this.state.peeps} />
+				<div className="team-name">
+					Add a peep
+				</div>
+				<NewPeep handleAdd={(i) => this.handleAdd(i)} />
 			</div>
 		);
 	}

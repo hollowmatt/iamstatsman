@@ -15,10 +15,13 @@
 
 @import "materialize";
 @import "material_icons";
+@import "common/constants";
 @import "teams";
 @import "squad";
 @import "home";
 @import "games";
+@import "header";
+@import "footer";
 
 .pagination li.active a {
   color: #fff;
