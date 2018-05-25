@@ -23,6 +23,14 @@ class NewSquad extends React.Component {
         data: team,
         success: (response) => {
           this.props.handleAdd(response);
+          this.setState ({
+            name:'',
+            sdm:'',
+            techlead:'',
+            tpm:'',
+            pm:'',
+            sm:''
+          });
         },
         error: (xhr, status, error) => {
           alert('Cannot add new record: ', error);
